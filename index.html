@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADN Franklin - Accueil</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <button class="sidebar__close" id="sidebarClose" aria-label="Fermer le menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="sidebar__nav">
+            <a href="index.html" class="sidebar__link sidebar__link--active">Rosalind Franklin</a>
+            <a href="/femmes-science.html" class="sidebar__link">Les Femmes de Science dans la Littérature</a>
+            <a href="/vulgarisation-adn.html" class="sidebar__link">Vulgarisation de l'ADN</a>
+            <a href="/films-series.html" class="sidebar__link">Films et Séries</a>
+            <a href="/la-mouche.html" class="sidebar__link">La Mouche</a>
+            <a href="/frise-matilda.html" class="sidebar__link">La Frise des Matilda</a>
+            <a href="/galerie-multimedia.html" class="sidebar__link">Galerie Multimédia</a>
+            <a href="/genie-genes.html" class="sidebar__link">Le Génie des Gènes</a>
+            <a href="/autres-projets.html" class="sidebar__link">Autres Projets</a>
+        </nav>
+        <div class="sidebar__cta">
+            <p class="sidebar__cta-text">Explorez nos articles</p>
+        </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <button class="header__menu-btn" id="menuBtn" aria-label="Ouvrir le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="header__logo">
+            <img src="assets/images/logo-adn.png" alt="ADN Franklin Logo" class="header__logo-img">
+            <span class="header__logo-text">ADN Franklin</span>
+        </div>
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav-link">FR</a>
+            <span class="header__nav-separator">|</span>
+            <a href="#" class="header__nav-link">EN</a>
+        </nav>
+        <div class="header__actions">
+            <button class="header__search-btn" aria-label="Rechercher">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <span class="hero__tag tag tag--purple">L'Effet Matilda</span>
+                <h1 class="hero__title">Rosalind Franklin : La Scientifique Oubliée de l'ADN</h1>
+                <p class="hero__meta">
+                    <span class="hero__author">Par Théo Araldi</span>
+                    <span class="hero__date">15 janvier 2024</span>
+                </p>
+                <p class="hero__excerpt">
+                    En 1952, Rosalind Franklin prend la célèbre "Photo 51", une image aux rayons X qui révèlera la structure en double hélice de l'ADN. Sans son accord, cette photo sera montrée à James Watson et Francis Crick, qui publieront leur découverte en 1953.
+                </p>
+                <p class="hero__text">
+                    L'Effet Matilda désigne le déni ou la minimisation récurrente de la contribution des femmes scientifiques à la recherche, dont le travail est souvent attribué à leurs collègues masculins. Le terme a été inventé en 1993 par l'historienne des sciences Margaret W. Rossiter.
+                </p>
+                <a href="pages/rosalind-franklin.html" class="hero__link link">Lire la suite</a>
+            </section>
+
+            <!-- Articles Grid -->
+            <section class="articles">
+                <div class="articles__grid">
+                    <!-- Article Card 1 -->
+                    <article class="card">
+                        <div class="card__image-wrapper">
+                            <img src="assets/images/rosalind-franklin-portrait.jpg" alt="Rosalind Franklin" class="card__image">
+                        </div>
+                        <div class="card__content">
+                            <span class="card__tag tag tag--teal">Article</span>
+                            <h3 class="card__title">Rosalind Franklin : La Scientifique Oubliée de l'ADN</h3>
+                            <p class="card__excerpt">Découvrez l'histoire méconnue de cette brillante chercheuse qui a permis une avancée majeure dans la compréhension de l'ADN.</p>
+                            <a href="pages/rosalind-franklin.html" class="card__link link">Lire la suite</a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 2 -->
+                    <article class="card">
+                        <div class="card__image-wrapper">
+                            <img src="assets/images/femmes-science-bibliotheque.jpg" alt="Femmes de Science dans la bibliothèque" class="card__image">
+                        </div>
+                        <div class="card__content">
+                            <span class="card__tag tag tag--teal">Article</span>
+                            <h3 class="card__title">Les Femmes de Science dans la bibliothèque</h3>
+                            <p class="card__excerpt">Dans l'univers de la littérature et du cinéma, les femmes scientifiques sont souvent reléguées au second plan ou totalement invisibilisées.</p>
+                            <a href="pages/femmes-science.html" class="card__link link">Lire la suite</a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 3 -->
+                    <article class="card">
+                        <div class="card__image-wrapper">
+                            <img src="assets/images/experience-adn.jpg" alt="Expérimentation ADN" class="card__image">
+                        </div>
+                        <div class="card__content">
+                            <span class="card__tag tag tag--purple">Article 58</span>
+                            <h3 class="card__title">Expérimentation de la théorie de l'ADN</h3>
+                            <p class="card__excerpt">Comprendre l'ADN : de la photo 51 à la double hélice en passant par les nucléotides.</p>
+                            <a href="pages/experimentation-adn.html" class="card__link link">Lire la suite</a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 4 -->
+                    <article class="card">
+                        <div class="card__image-wrapper">
+                            <img src="assets/images/films-series-recherche.jpg" alt="Films et Séries sur la recherche" class="card__image">
+                        </div>
+                        <div class="card__content">
+                            <span class="card__tag tag tag--teal">Article</span>
+                            <h3 class="card__title">Films et Séries : Réhabiliter les figures féminines</h3>
+                            <p class="card__excerpt">Comment le cinéma et les séries contribuent à réhabiliter les figures féminines de la science.</p>
+                            <a href="pages/films-series.html" class="card__link link">Lire la suite</a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 5 -->
+                    <article class="card">
+                        <div class="card__image-wrapper">
+                            <img src="assets/images/mouche-analyse.jpg" alt="La Mouche - Analyse" class="card__image">
+                        </div>
+                        <div class="card__content">
+                            <span class="card__tag tag tag--teal">Article</span>
+                            <h3 class="card__title">La Mouche : Analyse d'un Chef d'oeuvre Scientifique</h3>
+                            <p class="card__excerpt">Une plongée de Mouche de David Cronenberg, où la science devient le théâtre de la monstruosité humaine.</p>
+                            <a href="pages/la-mouche.html" class="card__link link">Lire la suite</a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 6 -->
+                    <article class="card">
+                        <div class="card__image-wrapper">
+                            <img src="assets/images/genie-genes.jpg" alt="Le Génie des Gènes" class="card__image">
+                        </div>
+                        <div class="card__content">
+                            <span class="card__tag tag tag--teal">Article</span>
+                            <h3 class="card__title">Le Génie des Gènes : Voyage au Coeur de la Révolution Génétique</h3>
+                            <p class="card__excerpt">Explorez les avancées qui transforment notre compréhension du vivant et ouvrent de nouvelles perspectives.</p>
+                            <a href="pages/genie-genes.html" class="card__link link">Lire la suite</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="cta-box">
+                    <h2 class="cta-box__title">Participez à la reconnaissance</h2>
+                    <p class="cta-box__text">Rejoignez notre communauté et contribuez à mettre en lumière les femmes scientifiques oubliées de l'histoire.</p>
+                    <a href="pages/contact.html" class="cta-box__btn btn btn--primary">Rejoindre la communauté</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__social">
+                    <span class="footer__social-label">Suivez nous :</span>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="footer__copyright">Site réalisé par <a href="#" class="footer__copyright-link">Théo Araldi</a> - Licence ouverte</p>
+                <nav class="footer__nav">
+                    <a href="#" class="footer__nav-link">Accueil</a>
+                    <a href="pages/glossaire.html" class="footer__nav-link">Glossaire</a>
+                    <a href="pages/a-propos.html" class="footer__nav-link">À propos</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>

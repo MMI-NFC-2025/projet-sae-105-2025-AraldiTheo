@@ -6,6 +6,12 @@
   --couleur-secondaire: #2ecc71;
   --couleur-texte: #34495e;
   --couleur-texte-important: #f10f0f;
+  
+  /* Couleurs pour le menu */
+  --light: #ffffff;
+  --dark: #000000;
+  --gray-500: #6b7280;
+  --gray-900: #111827;
 
 
   /* Polices de caractère */
