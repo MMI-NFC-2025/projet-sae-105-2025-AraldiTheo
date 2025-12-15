@@ -3,8 +3,8 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
+- NOM :Araldi
+- PRÉNOM :Théo
+- GROUPE :Td C1
 - URL du site :
-- URL FIGMA :
+- URL FIGMA :https://www.figma.com/design/WubY1itRWNXCPPsl5Mu9a4/Maquettes-projet-individuel-%E2%80%94-Th%C3%A9o-Araldi?node-id=29-612&t=n1TQaXnPQd54KPGw-0
