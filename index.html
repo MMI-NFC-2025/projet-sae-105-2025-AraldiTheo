@@ -6,7 +6,8 @@
     <title>ADN Franklin</title>
 
     <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
-    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <script src="/src/js/main.js" defer></script>
 
 </head>
 
@@ -21,18 +22,7 @@
 <h1 class="header__title">ADN Franklin</h1>
 <img src="/assets/icons/langueFR.svg" alt="Langue Française" class="header__lang-icon">
 
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li><a href="" class="header__nav-link">Rosalind Franklin </a></li>
-                <li><a href="" class="header__nav-link">Les Femmes de Science dans la Littérature</a></li>
-                <li><a href="" class="header__nav-link">Vulgarisation de l'ADN</a></li>
-                <li><a href="" class="header__nav-link">Films et Séries </a></li>
-                <li><a href="" class="header__nav-link">La Mouche</a></li>
-                <li><a href="" class="header__nav-link">La Frise des Matilda</a></li>
-                <li><a href="" class="header__nav-link">Le Génies des Gènes</a></li>
-                <li><a href="" class="header__nav-link">Autres Projets</a></li>
-            </ul>
-        </nav>
+        
 
         <button class="header__menu-btn" id="openNav"><img src="/assets/icons/button.svg" alt="menu"></button>
        
@@ -166,6 +156,35 @@
     </section>
 
  
+
+    <!--Navigation -->
+    <nav class="mobile-nav" id="mobileNav" hidden>
+        <div class="mobile-nav__header">
+            <div class="mobile-nav__logo">
+                <img src="assets/icons/icon.svg" alt="ADN Franklin" class="mobile-nav__logo-img">
+            </div>
+            <div class="mobile-nav__actions">
+                <button class="mobile-nav__search" aria-label="Rechercher">
+                    <img src="/assets/icons/loupe.svg" alt="rechercher">
+                </button>
+                <button class="mobile-nav__close" id="closeNav" aria-label="Fermer le menu">
+                    <img src="/assets/icons/croix.svg" alt="fermer">
+                </button>
+            </div>
+        </div>
+
+        <ul class="mobile-nav__list">
+            <li><a href="rosalind-franklin.html" class="mobile-nav__link">Rosalind Franklin</a></li>
+            <li><a href="femmes-science.html" class="mobile-nav__link">Les Femmes de Science<br>dans la Littérature</a></li>
+            <li><a href="vulgarisation-adn.html" class="mobile-nav__link">Vulgarisation de l'ADN</a></li>
+            <li><a href="films-series.html" class="mobile-nav__link">Films et Séries</a></li>
+            <li><a href="la-mouche.html" class="mobile-nav__link">La Mouche</a></li>
+            <li><a href="frise-matilda.html" class="mobile-nav__link">La Frise des Matilda</a></li>
+            <li><a href="galerie-multimedia.html" class="mobile-nav__link">Galerie Multimédia</a></li>
+            <li><a href="genie-genes.html" class="mobile-nav__link">Le Génies des Gènes</a></li>
+            <li><a href="autres-projets.html" class="mobile-nav__link mobile-nav__link--highlight">Autres Projets</a></li>
+        </ul>
+    </nav>
 
     <!-- Footer -->
     <footer class="footer">
