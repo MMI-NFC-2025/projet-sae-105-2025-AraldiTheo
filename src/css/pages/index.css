@@ -1,0 +1,91 @@
+/* Page Index - Styles spécifiques
+   ========================================================================== */
+
+/* Info Section - L'Effet Matilda
+   ========================================================================== */
+.info-section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-section__content--text {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+}
+
+.info-section__content--text .info-section__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+.info-section__content--text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.info-section__content--text p:last-child {
+  margin-bottom: 0;
+}
+
+.info-section__content--text strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Call to Action Section */
+.info-section--cta {
+  background-color: #10b981;
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+  margin: 3rem 0;
+}
+
+.info-section--cta .info-section__title {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section__subtitle {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--cta {
+  background-color: var(--couleur-tiers);
+  color: var(--dark);
+}
+
+.text-centre {
+  text-align: center;
+}
+

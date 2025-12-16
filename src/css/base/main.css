@@ -57,25 +57,10 @@
 }
 
 .hero__description {
-    font-family: var(--font-family-secondary);
+  font-family: var(--font-family-secondary);
   font-size: 1.125rem;
   line-height: 1.7;
   color: var(--light);
   margin-bottom: 2rem;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-
-/* Logo jaune au centre */
-.hero__content::before {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 2rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-

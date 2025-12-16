@@ -43,11 +43,7 @@
   font-weight: 500;
   color: #ffffff;
   margin: 0;
-  
 }
-
-/* Icône langue FR */
-
 
 /* Bouton menu hamburger */
 .header__menu-btn {
@@ -69,4 +65,3 @@
   width: 32px;
   height: 32px;
 }
-
