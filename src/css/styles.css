@@ -6,4 +6,6 @@
 @import "components/menu.css";
 @import "layout/footer.css";
 @import "pages/index.css";
-@import "components/card.css"
+@import "pages/article.css";
+@import "components/card.css";
+@import "pages/rosalind.css";
