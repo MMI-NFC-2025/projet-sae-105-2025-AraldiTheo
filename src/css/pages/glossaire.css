@@ -1,0 +1,38 @@
+/* Glossaire Page
+   ========================================================================== */
+
+.page--glossary {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  background-color: #ffffff;
+}
+
+/* Item du glossaire */
+.glossary__item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.glossary__item:last-child {
+  border-bottom: none;
+}
+
+/* Terme */
+.glossary__term {
+  font-family: var(--font-family-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+/* Définition */
+.glossary__definition {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0;
+}
