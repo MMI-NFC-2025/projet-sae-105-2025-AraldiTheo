@@ -45,7 +45,7 @@
 
 /* Call to Action Section */
 .info-section--cta {
-  background-color: #10b981;
+  background: linear-gradient(135deg, var(--couleur-secondaire) 0%, var(--couleur-contraste) 100%);
   color: #ffffff;
   text-align: center;
   padding: 5rem 2rem;
