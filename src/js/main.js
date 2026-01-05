@@ -68,85 +68,66 @@ document.addEventListener("keydown", (e) => {
 })
 
 // ===== Breadcrumb Navigation History =====
-// Définition des titres de pages
-const pageConfig = {
-  '/index.html': { title: 'Accueil', url: '/index.html' },
-  '/indexEng.html': { title: 'Home', url: '/indexEng.html' },
-  '/fr/rosalind-franklin.html': { title: 'Rosalind Franklin', url: '/fr/rosalind-franklin.html' },
-  '/fr/femmes-science.html': { title: 'Les Femmes de Science', url: '/fr/femmes-science.html' },
-  '/fr/vulgarisation-adn.html': { title: 'Vulgarisation de l\'ADN', url: '/fr/vulgarisation-adn.html' },
-  '/fr/films-series.html': { title: 'Films et Séries', url: '/fr/films-series.html' },
-  '/fr/la-mouche.html': { title: 'La Mouche', url: '/fr/la-mouche.html' },
-  '/fr/genie-genes.html': { title: 'Le Génie des Gènes', url: '/fr/genie-genes.html' },
-  '/fr/glossaire.html': { title: 'Glossaire', url: '/fr/glossaire.html' },
-  '/fr/apropos.html': { title: 'À propos', url: '/fr/apropos.html' },
-  '/fr/contact.html': { title: 'Contact', url: '/fr/contact.html' },
-  '/fr/frise-matilda.html': { title: 'La Frise des Matilda', url: '/fr/frise-matilda.html' },
-  '/en/rosalind-franklineng.html': { title: 'Rosalind Franklin', url: '/en/rosalind-franklineng.html' },
-  '/en/femmes-scienceeng.html': { title: 'Women Scientists', url: '/en/femmes-scienceeng.html' },
-  '/en/vulgarisation-adneng.html': { title: 'DNA Popularization', url: '/en/vulgarisation-adneng.html' },
-  '/en/films-serieseng.html': { title: 'Films and Series', url: '/en/films-serieseng.html' },
-  '/en/la-moucheeng.html': { title: 'The Fly', url: '/en/la-moucheeng.html' },
-  '/en/genie-geneseng.html': { title: 'The Genius of Genes', url: '/en/genie-geneseng.html' },
-  '/en/glossaireeng.html': { title: 'Glossary', url: '/en/glossaireeng.html' },
-  '/en/aproposeng.html': { title: 'About', url: '/en/aproposeng.html' },
-  '/en/contacteng.html': { title: 'Contact', url: '/en/contacteng.html' },
-  '/en/frise-matildaeng.html': { title: 'The Matilda Timeline', url: '/en/frise-matildaeng.html' }
-}
-
 function updateBreadcrumb() {
   const breadcrumbList = document.querySelector('.breadcrumb__list')
   if (!breadcrumbList) return
 
   const currentPath = window.location.pathname
-  const currentPage = pageConfig[currentPath]
-  if (!currentPage) return
-
-  // Récupérer l'historique stocké
+  
+  // Récupérer le titre depuis le breadcrumb existant ou le h1
+  const currentBreadcrumbText = document.querySelector('.breadcrumb__current')?.textContent
+  const currentH1 = document.querySelector('.article__title, h1')?.textContent
+  const currentTitle = currentBreadcrumbText || currentH1 || document.title
+  
+  // Déterminer si c'est la version anglaise
+  const isEnglish = currentPath.includes('/en/') || currentPath.includes('Eng.html')
+  const homeTitle = isEnglish ? 'Home' : 'Accueil'
+  const homeUrl = isEnglish ? '/indexEng.html' : '/index.html'
+  
+  // Récupérer et mettre à jour l'historique
   let history = JSON.parse(sessionStorage.getItem('pageHistory') || '[]')
   
-  // Ajouter la page actuelle à l'historique si elle n'est pas déjà la dernière
-  if (history.length === 0 || history[history.length - 1] !== currentPath) {
-    history.push(currentPath)
-    // Garder seulement les 3 dernières pages (pour avoir 2 pages précédentes + actuelle)
+  // Ajouter la page actuelle avec son titre
+  const currentPageData = { path: currentPath, title: currentTitle }
+  
+  if (history.length === 0 || history[history.length - 1].path !== currentPath) {
+    history.push(currentPageData)
+    // Garder seulement les 3 dernières pages
     if (history.length > 3) {
       history = history.slice(-3)
     }
     sessionStorage.setItem('pageHistory', JSON.stringify(history))
   }
-
-  // Construire le fil d'Ariane
-  const isEnglish = currentPath.includes('/en/') || currentPath.includes('Eng.html')
-  const homeTitle = isEnglish ? 'Home' : 'Accueil'
-  const homeUrl = isEnglish ? '/indexEng.html' : '/index.html'
   
+  // Construire le fil d'Ariane
   let breadcrumbHTML = `
     <li class="breadcrumb__item">
       <a href="${homeUrl}" class="breadcrumb__link">${homeTitle}</a>
     </li>
   `
-
-  // Ajouter les pages précédentes (maximum 2)
-  const previousPages = history.slice(0, -1).filter(path => path !== '/index.html' && path !== '/indexEng.html')
   
-  previousPages.forEach(path => {
-    const page = pageConfig[path]
-    if (page) {
-      breadcrumbHTML += `
-        <li class="breadcrumb__item">
-          <a href="${page.url}" class="breadcrumb__link">${page.title}</a>
-        </li>
-      `
-    }
+  // Ajouter les pages précédentes (sauf home et page actuelle)
+  const previousPages = history.slice(0, -1).filter(page => 
+    page.path !== '/index.html' && 
+    page.path !== '/indexEng.html' &&
+    page.path !== currentPath
+  )
+  
+  previousPages.forEach(page => {
+    breadcrumbHTML += `
+      <li class="breadcrumb__item">
+        <a href="${page.path}" class="breadcrumb__link">${page.title}</a>
+      </li>
+    `
   })
-
+  
   // Ajouter la page actuelle
   breadcrumbHTML += `
     <li class="breadcrumb__item breadcrumb__item--active">
-      <span class="breadcrumb__current">${currentPage.title}</span>
+      <span class="breadcrumb__current">${currentTitle}</span>
     </li>
   `
-
+  
   breadcrumbList.innerHTML = breadcrumbHTML
 }
 
