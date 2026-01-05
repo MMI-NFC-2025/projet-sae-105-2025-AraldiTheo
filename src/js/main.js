@@ -71,6 +71,7 @@ document.addEventListener("keydown", (e) => {
 // Définition des titres de pages
 const pageConfig = {
   '/index.html': { title: 'Accueil', url: '/index.html' },
+  '/indexEng.html': { title: 'Home', url: '/indexEng.html' },
   '/fr/rosalind-franklin.html': { title: 'Rosalind Franklin', url: '/fr/rosalind-franklin.html' },
   '/fr/femmes-science.html': { title: 'Les Femmes de Science', url: '/fr/femmes-science.html' },
   '/fr/vulgarisation-adn.html': { title: 'Vulgarisation de l\'ADN', url: '/fr/vulgarisation-adn.html' },
@@ -79,7 +80,18 @@ const pageConfig = {
   '/fr/genie-genes.html': { title: 'Le Génie des Gènes', url: '/fr/genie-genes.html' },
   '/fr/glossaire.html': { title: 'Glossaire', url: '/fr/glossaire.html' },
   '/fr/apropos.html': { title: 'À propos', url: '/fr/apropos.html' },
-  '/fr/contact.html': { title: 'Contact', url: '/fr/contact.html' }
+  '/fr/contact.html': { title: 'Contact', url: '/fr/contact.html' },
+  '/fr/frise-matilda.html': { title: 'La Frise des Matilda', url: '/fr/frise-matilda.html' },
+  '/en/rosalind-franklineng.html': { title: 'Rosalind Franklin', url: '/en/rosalind-franklineng.html' },
+  '/en/femmes-scienceeng.html': { title: 'Women Scientists', url: '/en/femmes-scienceeng.html' },
+  '/en/vulgarisation-adneng.html': { title: 'DNA Popularization', url: '/en/vulgarisation-adneng.html' },
+  '/en/films-serieseng.html': { title: 'Films and Series', url: '/en/films-serieseng.html' },
+  '/en/la-moucheeng.html': { title: 'The Fly', url: '/en/la-moucheeng.html' },
+  '/en/genie-geneseng.html': { title: 'The Genius of Genes', url: '/en/genie-geneseng.html' },
+  '/en/glossaireeng.html': { title: 'Glossary', url: '/en/glossaireeng.html' },
+  '/en/aproposeng.html': { title: 'About', url: '/en/aproposeng.html' },
+  '/en/contacteng.html': { title: 'Contact', url: '/en/contacteng.html' },
+  '/en/frise-matildaeng.html': { title: 'The Matilda Timeline', url: '/en/frise-matildaeng.html' }
 }
 
 function updateBreadcrumb() {
@@ -104,14 +116,18 @@ function updateBreadcrumb() {
   }
 
   // Construire le fil d'Ariane
+  const isEnglish = currentPath.includes('/en/') || currentPath.includes('Eng.html')
+  const homeTitle = isEnglish ? 'Home' : 'Accueil'
+  const homeUrl = isEnglish ? '/indexEng.html' : '/index.html'
+  
   let breadcrumbHTML = `
     <li class="breadcrumb__item">
-      <a href="/index.html" class="breadcrumb__link">Accueil</a>
+      <a href="${homeUrl}" class="breadcrumb__link">${homeTitle}</a>
     </li>
   `
 
   // Ajouter les pages précédentes (maximum 2)
-  const previousPages = history.slice(0, -1).filter(path => path !== '/index.html')
+  const previousPages = history.slice(0, -1).filter(path => path !== '/index.html' && path !== '/indexEng.html')
   
   previousPages.forEach(path => {
     const page = pageConfig[path]
@@ -140,3 +156,21 @@ if (document.readyState === 'loading') {
 } else {
   updateBreadcrumb()
 }
+
+// ===== Video Click to Play =====
+// Gérer tous les clics sur les vidéos pour les lancer
+const videoIds = ['radioactiveVideo', 'lamoucheVideo', 'theflyVideo'];
+
+videoIds.forEach(videoId => {
+  const video = document.getElementById(videoId);
+  if (video) {
+    video.addEventListener('click', function() {
+      if (this.paused) {
+        this.play();
+        this.setAttribute('controls', 'controls');
+      } else {
+        this.pause();
+      }
+    });
+  }
+});
