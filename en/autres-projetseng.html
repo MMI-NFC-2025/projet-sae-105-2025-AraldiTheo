@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADN Franklin</title>
+    <title>DNA Franklin</title>
 
     <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
     <link rel="stylesheet" href="/src/css/styles.css">
@@ -11,95 +11,111 @@
 
 </head>
 
-<body>
+
 <div class="site">
 
     <!-- Header -->
     <header class="header">
         <a href="../indexEng.html" class="header__logo">
-            <img src="/assets/icons/icon.svg" alt="ADN Franklin" class="header__logo-img">
+            <img src="/assets/icons/icon.svg" alt="DNA Franklin" class="header__logo-img">
         </a>
-<h1 class="header__title">ADN Franklin</h1>
+<h1 class="header__title">DNA Franklin</h1>
 <a href="/index.html">
-<img src="/assets/icons/langueEN.svg" alt="English Language" class="header__langeng-icon"></a>
+<img src="/assets/icons/langueFR.svg" alt="French Language" class="header__lang-icon"></a>
 
         
 
         <button class="header__menu-btn" id="openNav"><img src="/assets/icons/button.svg" alt="menu"></button>
        
     </header>
-    
+
 <main class="page page--article">
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <ol class="breadcrumb__list">
     <li class="breadcrumb__item">
-      <a href="/indexEng.html" class="breadcrumb__link">Home</a>
+      <a href="../indexEng.html" class="breadcrumb__link">Home</a>
     </li>
     <li class="breadcrumb__item breadcrumb__item--active">
-      <span class="breadcrumb__current">DNA Popularization</span>
+      <span class="breadcrumb__current">Other Projects</span>
     </li>
   </ol>
 </nav>
 
-<article class="article article--main">
+<section class="carousel-wrapper">
+  <h2 class="carousel-title">Discover other projects</h2>
+  
+  <div class="carousel-container">
+    <button class="carousel-btn prev-btn" id="prevBtn">
+      <span>&lt;</span>
+    </button>
 
+    <div class="carousel-content">
+      <div class="carousel-slide active">
+        <img src="/assets/img/Margaret-Hamilton.avif" alt="Project 1">
+        <div class="slide-info">
+          <h3>Lola BROUART</h3>
+          <p>Margaret Hamilton</p>
+          <a href="#" class="slide-link">Learn more →</a>
+        </div>
+      </div>
 
-<header class="article__header">
-<span class="article__category">Main Article</span>
-<h1 class="article__title">Popularization of DNA Theory</h1>
+      <div class="carousel-slide">
+        <img src="/assets/img/Jocelyn-Bell.avif" alt="Project 2">
+        <div class="slide-info">
+          <h3>Deroo valentin</h3>
+          <p>Jocelyn Bell</p>
+          <a href="#" class="slide-link">Learn more →</a>
+        </div>
+      </div>
 
+      <div class="carousel-slide">
+        <img src="/assets/img/Lise-Meitner.avif" alt="Project 3">
+        <div class="slide-info">
+          <h3>Mathéo Girardin Tarby</h3>
+          <p>Lise Meitner</p>
+          <a href="#" class="slide-link">Learn more →</a>
+        </div>
+      </div>
 
-<div class="article__meta">
-<time class="article__date" datetime="2025-10-14">October 14, 2025</time>
-<span class="article__author">Scientific Editorial Team</span>
-</div>
-</header>
+      <div class="carousel-slide">
+        <img src="/assets/img/Chien-Shiung-Wu.avif" alt="Project 4">
+        <div class="slide-info">
+          <h3>Sacha Martin</h3>
+          <p>Chien Shiung Wu</p>
+          <a href="#" class="slide-link">Learn more →</a>
+        </div>
+      </div>
 
+      <div class="carousel-slide">
+        <img src="/assets/img/Hidden-Reactions.avif" alt="Project 5">
+        <div class="slide-info">
+          <h3>Konstance Kruger</h3>
+          <p>Hidden Reactions.</p>
+          <a href="#" class="slide-link">Learn more →</a>
+        </div>
+      </div>
 
-<section class="article__intro">
-<p class="article__lead">
-DNA, or deoxyribonucleic acid, is the molecule that carries the genetic information of all living beings. Let's discover its secrets together.</p>
+      <div class="carousel-slide">
+        <img src="/assets/img/Lumière-sur-Elles.avif" alt="Project 6">
+        <div class="slide-info">
+          <h3>Matthis Carnicer</h3>
+          <p>Spotlight on Them</p>
+          <a href="#" class="slide-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn next-btn" id="nextBtn">
+      <span>&gt;</span>
+    </button>
+  </div>
+
+  <div class="carousel-dots" id="carouselDots"></div>
 </section>
-<div>
-<img src="/assets/img/articlecard9.avif" alt="helical DNA image" loading="lazy">
-<p class="img_legende">Helical DNA</p>
-</div>
-<section class="article__content">
-<p class="article__paragraph">
-DNA is a double helix-shaped molecule composed of <a class="text-glossaire" href="/en/glossaireeng.html">four nitrogenous bases: adenine (A), thymine (T), guanine (G), and cytosine (C)</a>. These bases pair specifically: A with T, and G with C, forming the "rungs" of the helical ladder.</p>
-
-
-<p class="article__paragraph">
-The discovery of DNA's structure in 1953 revolutionized biology. It allowed us to understand how genetic information is stored, copied, and transmitted from generation to generation.</p>
-
-
-<blockquote class="article__quote">
-<p class="article__quote-text">"We have discovered the secret of life."</p>
-<cite class="article__quote-author">— Francis Crick</cite>
-</blockquote>
-
-
-<p class="article__paragraph">
-Today, our understanding of DNA has extraordinary applications: <a class="text-glossaire" href="/en/glossaireeng.html">genomic sequencing, gene therapies</a>, paternity tests, criminal investigations, and even the conservation of endangered species.</p>
-</section>
-<div>
-<img src="/assets/img/articlecard10.avif" alt="Gene therapies" loading="lazy">
-<p class="img_legende">Gene therapies</p>
-</div>
-<section class="article__content"></section>
-<p class="article__paragraph">
-Modern techniques like <a class="text-glossaire" href="/en/glossaireeng.html">CRISPR-Cas9</a> now allow us to edit the genome with unprecedented precision, opening fascinating prospects but also raising important ethical questions.</p>
-</section>
-
-
-
-</article>
-
 
 </main>
 
-    <!--Navigation -->
-    <nav class="mobile-nav" id="mobileNav" hidden>
+        <nav class="mobile-nav" id="mobileNav" hidden>
         <div class="mobile-nav__header">
             <div class="mobile-nav__logo">
                 <img src="/assets/icons/icon.svg" alt="ADN Franklin" class="mobile-nav__logo-img">
@@ -116,12 +132,11 @@ Modern techniques like <a class="text-glossaire" href="/en/glossaireeng.html">CR
 
         <ul class="mobile-nav__list">
             <li><a href="/en/rosalind-franklineng.html" class="mobile-nav__link">Rosalind Franklin</a></li>
-            <li><a href="/en/femmes-scienceeng.html" class="mobile-nav__link">Women Scientists<br>in Literature</a></li>
+            <li><a href="/en/femmes-scienceeng.html" class="mobile-nav__link">Women of Science<br>in Literature</a></li>
             <li><a href="/en/vulgarisation-adneng.html" class="mobile-nav__link">DNA Popularization</a></li>
             <li><a href="/en/films-serieseng.html" class="mobile-nav__link">Films and Series</a></li>
             <li><a href="/en/la-moucheeng.html" class="mobile-nav__link">The Fly</a></li>
             <li><a href="/en/frise-matildaeng.html" class="mobile-nav__link">The Matilda Timeline</a></li>
-
             <li><a href="/en/genie-geneseng.html" class="mobile-nav__link">The Genius of Genes</a></li>
             <li><a href="/en/autres-projetseng.html" class="mobile-nav__link mobile-nav__link--highlight">Other Projects</a></li>
         </ul>
